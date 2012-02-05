@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, NEAKConfiguratorActivity!</string>
+    <string name="app_name">NEAK Configurator</string>
+    <string name="governor_title">Governors</string>
+    <string name="kernel_options_title">Kernel Options</string>
+    <string name="conservative_enable_text">Conservative Governor</string>
+    <string name="lionheart_enable_text">Lionheart Tweaks</string>
+    <string name="lionheart_description_text">Note: Lionheart tweaks for Conservative Governor. Once enabled
+        the Conservative Governor will have the Lionheart tweaks activated.</string>
+    <string name="lazy_enable_text">Lazy Governor</string>
+    <string name="other_title">Other Options</string>
+    <string name="sched_mc_enable_text">SCHED_MC</string>
+    <string name="aftr_idle_enable_text">AFTR Idle Mode</string>
+   
+
+</resources>
