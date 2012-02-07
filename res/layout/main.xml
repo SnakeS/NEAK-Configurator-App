@@ -1,39 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:id="@+id/textView_kernelOptions"
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView2"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/kernel_options_title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_weight="0.05" >
+=======
+        android:layout_weight="0.40" >
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
 
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
+<<<<<<< HEAD
 
             <TextView
                 android:id="@+id/textView_Governors"
+=======
+
+            <TextView
+                android:id="@+id/textView1"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/governor_title"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
+<<<<<<< HEAD
 
             <CheckBox
                 android:id="@+id/checkBox_conservative"
@@ -41,12 +69,21 @@
                 android:layout_height="wrap_content"
                 android:text="@string/conservative_enable_text" />
 
+=======
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/conservative_enable_text" />
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
+<<<<<<< HEAD
 
             <CheckBox
                 android:id="@+id/checkBox_lionheart"
@@ -58,6 +95,18 @@
 
         <TextView
             android:id="@+id/textView_lionheartNotes"
+=======
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lionheart_enable_text" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/textView3"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lionheart_description_text"
@@ -67,6 +116,7 @@
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
+<<<<<<< HEAD
 
             <CheckBox
                 android:id="@+id/checkBox_lazy"
@@ -78,6 +128,18 @@
 
         <TableRow
         	android:id="@+id/tableRow5"
+=======
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lazy_enable_text" />
+        </TableRow>
+
+        <TableRow
+        	android:id="@+id/tableRow4"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
             
@@ -91,12 +153,21 @@
         </TableRow>
         
         <TableRow
+<<<<<<< HEAD
         	android:id="@+id/tableRow6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
             <CheckBox
                 android:id="@+id/checkBox_sched_mc"
+=======
+        	android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sched_mc_enable_text" />
@@ -104,16 +175,26 @@
         </TableRow>
         
         <TableRow
+<<<<<<< HEAD
         	android:id="@+id/tableRow7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
             <CheckBox
                 android:id="@+id/checkBox_aftr"
+=======
+        	android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/aftr_idle_enable_text" />
             
+<<<<<<< HEAD
         </TableRow>
 
         <Button
@@ -128,6 +209,9 @@
             android:layout_height="wrap_content"
             android:text="@string/apply_reboot" />
 
+=======
+        </TableRow>
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
     </TableLayout>
 
 </LinearLayout>

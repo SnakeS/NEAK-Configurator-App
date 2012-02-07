@@ -13,8 +13,13 @@
     <string name="other_title">Other Options</string>
     <string name="sched_mc_enable_text">SCHED_MC</string>
     <string name="aftr_idle_enable_text">AFTR Idle Mode</string>
+<<<<<<< HEAD
     <string name="apply_no_reboot">Apply Settings (Reboot later)</string>
     <string name="apply_reboot">Apply Settings and Reboot</string>
    
 
+=======
+   
+
+>>>>>>> 87235050d73daf544a27d30da959555f15970a71
 </resources>
