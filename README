@@ -5,7 +5,3 @@ Current version is in Alpha build, and does not provide any functionality. Curre
 to read which modules are currently enabled on the kernel.
 
 To be added in the next commit is functionality.
-
-
-N.B. Please ignore all files in com.xdadevelopers.NEAK as these are older files with an old package name. 
-These will not be in the final version. They are being kept in the repo for the mean time as a fallback.
