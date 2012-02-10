@@ -1,217 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<LinearLayout android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="wrap_content"
+   	android:layout_height="fill_parent"
+   	android:orientation="vertical"
+   	xmlns:android="http://schemas.android.com/apk/res/android">
+		
+    <LinearLayout android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical">
+	    
+    	<TextView
+	        android:id="@+id/textView_kernelOptions"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/kernel_options_title"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+	    <TextView
+	        android:id="@+id/textView_Governors"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/governor_title"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	
+	    <CheckBox
+	        android:id="@+id/checkBox_conservative"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/conservative_enable_text" />
+	
+		<CheckBox
+	        android:id="@+id/checkBox_lionheart"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lionheart_enable_text" />
+	    <TextView
+			android:id="@+id/textView_lionheartNotes"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/lionheart_description_text"
+			android:textAppearance="?android:attr/textAppearanceSmall" />
+			
+		<CheckBox
+	        android:id="@+id/checkBox_lazy"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lazy_enable_text" />
+	
+		<TextView
+	        android:id="@+id/textView_lazyNotes"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/other_title"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+		<CheckBox
+	        android:id="@+id/checkBox_sched_mc"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/sched_mc_enable_text" />
+	       
+	    <CheckBox
+	        android:id="@+id/checkBox_aftr"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/aftr_idle_enable_text" />
+	    
+	    <Button
+	        android:id="@+id/button_applyNoBoot"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/apply_no_reboot" />
+		
+		<Button
+	        android:id="@+id/button_applyBoot"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/apply_reboot" />
+	
+		<TextView
+		    android:id="@+id/textView_otaTitle"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/ota_title"
+		    android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+		<TextView
+		    android:id="@+id/textView_otaStatus"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/ota_status"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView_kernelOptions"
-=======
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+		<Button
+		    android:id="@+id/button_downloadOTA"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/download_ota" />
 
-    <TextView
-        android:id="@+id/textView2"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kernel_options_title"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-<<<<<<< HEAD
-
-=======
+	</LinearLayout>
 
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-    <TableLayout
-        android:id="@+id/tableLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_weight="0.05" >
-=======
-        android:layout_weight="0.40" >
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
+</ScrollView>
+  	
 
-        <TableRow
-            android:id="@+id/tableRow1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-<<<<<<< HEAD
-
-            <TextView
-                android:id="@+id/textView_Governors"
-=======
 
-            <TextView
-                android:id="@+id/textView1"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/governor_title"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-<<<<<<< HEAD
-
-=======
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-<<<<<<< HEAD
-
-            <CheckBox
-                android:id="@+id/checkBox_conservative"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conservative_enable_text" />
-
-=======
-
-            <CheckBox
-                android:id="@+id/checkBox1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conservative_enable_text" />
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-<<<<<<< HEAD
-
-            <CheckBox
-                android:id="@+id/checkBox_lionheart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lionheart_enable_text" />
-
-        </TableRow>
-
-        <TextView
-            android:id="@+id/textView_lionheartNotes"
-=======
-
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lionheart_enable_text" />
-        </TableRow>
-
-        <TextView
-            android:id="@+id/textView3"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lionheart_description_text"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-<<<<<<< HEAD
-
-            <CheckBox
-                android:id="@+id/checkBox_lazy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lazy_enable_text" />
-
-        </TableRow>
-
-        <TableRow
-        	android:id="@+id/tableRow5"
-=======
-
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lazy_enable_text" />
-        </TableRow>
-
-        <TableRow
-        	android:id="@+id/tableRow4"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_title"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        </TableRow>
-        
-        <TableRow
-<<<<<<< HEAD
-        	android:id="@+id/tableRow6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <CheckBox
-                android:id="@+id/checkBox_sched_mc"
-=======
-        	android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <CheckBox
-                android:id="@+id/checkBox4"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sched_mc_enable_text" />
-            
-        </TableRow>
-        
-        <TableRow
-<<<<<<< HEAD
-        	android:id="@+id/tableRow7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <CheckBox
-                android:id="@+id/checkBox_aftr"
-=======
-        	android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <CheckBox
-                android:id="@+id/checkBox5"
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/aftr_idle_enable_text" />
-            
-<<<<<<< HEAD
-        </TableRow>
-
-        <Button
-            android:id="@+id/button_applyNoBoot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/apply_no_reboot" />
-
-        <Button
-            android:id="@+id/button_applyBoot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/apply_reboot" />
-
-=======
-        </TableRow>
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
-    </TableLayout>
-
-</LinearLayout>
+	

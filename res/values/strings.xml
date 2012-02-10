@@ -7,19 +7,24 @@
     <string name="kernel_options_title">Kernel Options</string>
     <string name="conservative_enable_text">Conservative Governor</string>
     <string name="lionheart_enable_text">Lionheart Tweaks</string>
-    <string name="lionheart_description_text">Note: Lionheart tweaks for Conservative Governor. Once enabled
+    <string name="lionheart_description_text">Note: Lionheart tweaks are modifications for the Conservative Governor. Once enabled
         the Conservative Governor will have the Lionheart tweaks activated.</string>
     <string name="lazy_enable_text">Lazy Governor</string>
     <string name="other_title">Other Options</string>
     <string name="sched_mc_enable_text">SCHED_MC</string>
     <string name="aftr_idle_enable_text">AFTR Idle Mode</string>
-<<<<<<< HEAD
     <string name="apply_no_reboot">Apply Settings (Reboot later)</string>
     <string name="apply_reboot">Apply Settings and Reboot</string>
+    <string name="ota_title">NEAK OTA App</string>
+    <string name="ota_status">OTA App status: Not Installed</string>
+    <string name="download_ota">Download OTA App</string>
+    <string name="app_url">http://mirror.zantekk.de/neak/ota-app-builds/NEAK-OTA-Updater.apk</string>
+    <string name="app_path">/sdcard/NEAK-OTA-Updater.apk</string>
+    <string name="app_final">/data/app/NEAK-OTA-Updater.apk</string>
+    <string name="ota_hello">By clicking here you are going to download the N.E.A.K. OTA Updater App</string>
+    <string name="hello2">Please be sure you are connected to internet via WiFi or 3G</string>
+    <string name="buttontext">DOWNLOAD AND INSTALL APP</string>
+    <string name="buffer"> </string>
    
 
-=======
-   
-
->>>>>>> 87235050d73daf544a27d30da959555f15970a71
 </resources>
