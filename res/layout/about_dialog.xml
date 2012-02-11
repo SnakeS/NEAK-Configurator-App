@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    
+    <TextView 
+        android:id="@+id/textview_aboutTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_title"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        
+    <ScrollView 
+        android:id="@+id/scrollview_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textview_aboutTitle">
+        
+        <TextView
+            android:id="@+id/textview_aboutDescription"
+            android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+            android:text="@string/about_description"/>
+        
+    </ScrollView>
+    
+    <TextView
+	    android:id="@+id/textview_aboutCoding"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="@string/about_coding_title"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:layout_below="@+id/scrollview_dialog"/>
+	
+	<TextView
+	    android:id="@+id/textview_coder1"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="@string/about_coder1"
+	    android:layout_below="@+id/textview_aboutCoding"/>
+	
+	<TextView
+	    android:id="@+id/textview_coder2"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="@string/about_coder2"
+	    android:layout_below="@+id/textview_coder1"/>
+	        
+	<TextView
+	    android:id="@+id/textview_aboutCopyright"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="@string/about_copyright"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:layout_below="@+id/textview_coder2"/>
+
+	<Button
+	    android:id="@+id/button_aboutClose"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:text="@string/about_button_text"/>
+
+</RelativeLayout>

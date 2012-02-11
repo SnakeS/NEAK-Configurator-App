@@ -25,6 +25,34 @@
     <string name="hello2">Please be sure you are connected to internet via WiFi or 3G</string>
     <string name="buttontext">DOWNLOAD AND INSTALL APP</string>
     <string name="buffer"> </string>
+    <string name="lagfree_enable_text">Lagfree Governor</string>
+    <string name="about_title">About</string>
+    <string name="about_description">
+        This app is for controlling the NEAK kernel options without having to use the CWM Recovery\n
+        This app is also used for downloading the NEAK kernel OTA updater App\n
+        \n
+        The current options that this app can control are:\n
+        Conservative Governor\n
+        Lionheart Tweaks (for Conservative Governor)\n
+        Lazy Governor\n
+        Lagfree Governor\n
+        SCHED_MC\n
+        Aftr Idle Mode\n
+        \n
+        Settings require a reboot for the relevant modules to be loaded or removed\n
+        This app gives 2 options for applying settings, you can apply setting and reboot later, or apply settings and reboot now\n
+        \n
+        The NEAK OTA section of this app will show the current installation status of the NEAK OTA Updator App 
+        and have a button for downloading the app\n
+        \n
+        For help with this app, please go to:\n
+        http://forum.xda-developers.com/showthread.php?t=1430137
+        </string>
+    <string name="about_copyright">Copyright NEAR Team 2012</string>
+    <string name="about_coding_title">Coding by:</string>
+    <string name="about_coder1">NRK_2K</string>
+    <string name="about_coder2">Simone201</string>
+    <string name="about_button_text">Close</string>
    
 
 </resources>

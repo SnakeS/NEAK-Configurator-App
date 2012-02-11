@@ -47,6 +47,12 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:text="@string/lazy_enable_text" />
+		
+		<CheckBox
+	        android:id="@+id/checkBox_lagf"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/lagfree_enable_text" />
 	
 		<TextView
 	        android:id="@+id/textView_lazyNotes"

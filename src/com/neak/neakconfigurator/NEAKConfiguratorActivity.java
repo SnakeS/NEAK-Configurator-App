@@ -19,6 +19,9 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -32,6 +35,7 @@ public class NEAKConfiguratorActivity extends Activity {
 	private CheckBox chk_cons;
 	private CheckBox chk_lion;
 	private CheckBox chk_lazy;
+	private CheckBox chk_lagf;
 	private CheckBox chk_schd;
 	private CheckBox chk_aftr;
 	
@@ -39,6 +43,7 @@ public class NEAKConfiguratorActivity extends Activity {
 	public static boolean boo_cons = false;
 	public static boolean boo_lion = false;
 	public static boolean boo_lazy = false;
+	public static boolean boo_lagf = false;
 	public static boolean boo_schd = false;
 	public static boolean boo_aftr = false;
 	
@@ -63,11 +68,60 @@ public class NEAKConfiguratorActivity extends Activity {
         initiateUI();
     }
 	
+	// Initiating Menu display
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    
+    /**
+     * Menu option click handler
+     * */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+ 
+        switch (item.getItemId())
+        {
+        case R.id.menu_about:
+            // Display about dialog
+            final Dialog aboutDialog = new Dialog(NEAKConfiguratorActivity.this);
+            aboutDialog.setContentView(R.layout.about_dialog);
+            aboutDialog.setTitle("NEAK Configurator App");
+            aboutDialog.setCancelable(true);
+            
+            Button about_button = (Button) aboutDialog.findViewById(R.id.button_aboutClose);
+            about_button.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                    aboutDialog.cancel();
+                }
+            });
+            aboutDialog.show();
+            return true;
+ 
+        case R.id.menu_exit:
+            // Close the application
+            NEAKConfiguratorActivity.this.finish();
+            return true;
+ 
+        case R.id.menu_pro:
+            // Placeholder for link to future paid version
+            return true;
+ 
+        default:
+            return super.onOptionsItemSelected(item);
+        }
+    } 
+	
 	/** The following method sets up all UI elements and validates status of NEAK options modules */
 	private void initiateUI() {
 		chk_cons = (CheckBox) findViewById(R.id.checkBox_conservative);
         chk_lion = (CheckBox) findViewById(R.id.checkBox_lionheart);
         chk_lazy = (CheckBox) findViewById(R.id.checkBox_lazy);
+        chk_lagf = (CheckBox) findViewById(R.id.checkBox_lagf);
         chk_schd = (CheckBox) findViewById(R.id.checkBox_sched_mc);
         chk_aftr = (CheckBox) findViewById(R.id.checkBox_aftr);
         
@@ -123,6 +177,19 @@ public class NEAKConfiguratorActivity extends Activity {
             	else {
             		Toast.makeText(NEAKConfiguratorActivity.this, "Lazy Governor will be disabled on reboot", Toast.LENGTH_SHORT).show();
             		boo_lazy = false;
+            	}
+            }
+        });
+        
+        chk_lagf.setOnClickListener(new OnClickListener(){
+            public void onClick(View v) {
+            	if (chk_lagf.isChecked()) {
+            		Toast.makeText(NEAKConfiguratorActivity.this, "Lagfree Governor will be enabled on reboot", Toast.LENGTH_SHORT).show();
+            		boo_lagf = true;
+            	}
+            	else {
+            		Toast.makeText(NEAKConfiguratorActivity.this, "Lagfree Governor will be disabled on reboot", Toast.LENGTH_SHORT).show();
+            		boo_lagf = false;
             	}
             }
         });
@@ -231,6 +298,21 @@ public class NEAKConfiguratorActivity extends Activity {
 		catch (Exception e) {  
             e.printStackTrace();  
         }
+		// Test if Lagfree is already enabled, and check it in the App
+		try {
+			File f = new File("/data/neak/lagfree");
+			if (f.exists()) {
+				chk_lagf.setChecked(true);
+				boo_lagf = true;
+			}else {
+				chk_lagf.setChecked(false);
+				boo_lagf = false;
+			}
+			
+		}
+		catch (Exception e) {  
+            e.printStackTrace();  
+	    }
 		// Test if SCHED_MC is already enabled, and check it in the App
 		try {
 			File f = new File("/data/neak/schedmc");

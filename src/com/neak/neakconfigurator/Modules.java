@@ -52,6 +52,20 @@ public class Modules extends NEAKConfiguratorActivity {
 	            e.printStackTrace(); 
 	        }
 		}
+		if (boo_lagf) {
+			try {
+				File f_lagf = new File("/data/neak/lagfree");
+				if (f_lagf.exists()) {
+					// Do Nothing
+				}else {
+					Runtime.getRuntime().exec("touch /data/neak/lagfree");
+				}
+				
+			}
+			catch (Exception e) {  
+	            e.printStackTrace(); 
+	        }
+		}
 		if (boo_schd) {
 			try {
 				File f_schd = new File("/data/neak/schedmc");
@@ -118,6 +132,20 @@ public class Modules extends NEAKConfiguratorActivity {
 				File f_lazy = new File("/data/neak/lazy");
 				if (f_lazy.exists()) {
 					Runtime.getRuntime().exec("rm /data/neak/lazy");
+				}else {
+					// Do Nothing
+				}
+				
+			}
+			catch (Exception e) {  
+	            e.printStackTrace(); 
+	        }
+		}
+		if (!boo_lagf) {
+			try {
+				File f_lagf = new File("/data/neak/lagfree");
+				if (f_lagf.exists()) {
+					Runtime.getRuntime().exec("rm /data/neak/lagfree");
 				}else {
 					// Do Nothing
 				}

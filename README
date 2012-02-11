@@ -1,7 +1,27 @@
 NEAK Configurator App
 An app for controlling NEAK kernel options from an application for those who do not like to use CWM Recovery.
 
-First Release build.
+First Release build Uptdate 1
 
-Allows control off the NEAK Kernel options from an Application (requires reboot to finalise the install of modules)
-Download of NEAK OTA application is also included in this app.
+In this version:
+
+Control of the following NEAK kernel options:
+Conservative Governor
+Lionheart Tweaks (for Conservative Governor)
+Lazy Governor
+Lagfree Governor
+SCHED_MC
+Aftr Idle Mode
+
+NEAK OTA Updater App status and download are also included.
+
+Menu added to the app with the following:
+About
+"Pro" Version placeholder
+Exit
+
+Coding for this app by:
+NRK_2K
+Simone201
+
+
