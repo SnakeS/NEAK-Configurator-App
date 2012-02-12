@@ -53,6 +53,13 @@
 	    android:text="@string/about_copyright"
 	    android:textAppearance="?android:attr/textAppearanceMedium"
 	    android:layout_below="@+id/textview_coder2"/>
+	
+	<TextView
+	    android:id="@+id/textview_aboutKernelVersion"
+	    android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	    android:text="@string/about_kernel_version_text"
+	    android:layout_below="@+id/textview_aboutCopyright"/>
 
 	<Button
 	    android:id="@+id/button_aboutClose"

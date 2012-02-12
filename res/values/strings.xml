@@ -53,6 +53,7 @@
     <string name="about_coder1">NRK_2K</string>
     <string name="about_coder2">Simone201</string>
     <string name="about_button_text">Close</string>
+    <string name="about_kernel_version_text">Kernel Version: Reading Version</string>
    
 
 </resources>

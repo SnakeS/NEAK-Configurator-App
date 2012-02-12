@@ -1,10 +1,12 @@
 package com.neak.neakconfigurator;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
@@ -58,6 +60,8 @@ public class NEAKConfiguratorActivity extends Activity {
     
     // Initiate TextView for showing OTA App status
     private TextView ota_status;
+    
+    private TextView aboutKernelVersion;
 	
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,14 @@ public class NEAKConfiguratorActivity extends Activity {
             aboutDialog.setContentView(R.layout.about_dialog);
             aboutDialog.setTitle("NEAK Configurator App");
             aboutDialog.setCancelable(true);
+            
+            try {
+            	aboutKernelVersion = (TextView)aboutDialog.findViewById(R.id.textview_aboutKernelVersion);
+            	aboutKernelVersion.setText("Kernel Version: " + getSystemProperty("ro.neak.type"));
+            }
+            catch (Exception e){
+            	e.printStackTrace();
+            }
             
             Button about_button = (Button) aboutDialog.findViewById(R.id.button_aboutClose);
             about_button.setOnClickListener(new OnClickListener() {
@@ -247,6 +259,7 @@ public class NEAKConfiguratorActivity extends Activity {
             	startDownload();
             }
         });
+
 	}
 	
 	private void checkEnabled() {
@@ -359,18 +372,13 @@ public class NEAKConfiguratorActivity extends Activity {
 	}
 	/** Set up files to enable or disable modules on reboot */
 	private void createBootString() {
-    	
-		Toast.makeText(NEAKConfiguratorActivity.this, "Requesting root access", Toast.LENGTH_SHORT).show();
-        try {
+         try {
 			Runtime.getRuntime().exec("su");
 			Modules.EnablePackage();
 			Modules.DisablePackage();
-			Toast.makeText(NEAKConfiguratorActivity.this, "Root access granted", Toast.LENGTH_SHORT).show();
-			
-        } catch (Exception e) {
-			Toast.makeText(NEAKConfiguratorActivity.this, "No root access", Toast.LENGTH_SHORT).show();
+         } catch (Exception e) {
 			e.printStackTrace();
-		} 
+         } 
 		        	
     }
 	
@@ -456,6 +464,46 @@ public class NEAKConfiguratorActivity extends Activity {
         @Override
         protected void onPostExecute(String unused) {
             dismissDialog(DIALOG_DOWNLOAD_PROGRESS);
+        }
+        
+       
+    }
+    
+    /**
+     * Returns a SystemProperty
+     *
+     * @param propName The Property to retrieve
+     * @return The Property, or NULL if not found
+     */
+    public String getSystemProperty(String propName) {
+    	String line;
+        BufferedReader input = null;
+        try {
+            Process p = Runtime.getRuntime().exec("getprop " + propName);
+            input = new BufferedReader(new InputStreamReader(p.getInputStream()), 1024);
+            line = input.readLine();
+            input.close();
+        }
+        catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        finally {
+        	if (input != null) {
+                try {
+                    input.close();
+                }
+                catch (Exception e) {
+                	e.printStackTrace();
+                }
+            }
+        }
+
+        if (input != null && line != null) {
+        	return line;
+        }
+        else {
+        	return "Unable to Determine";
         }
     }
 		
