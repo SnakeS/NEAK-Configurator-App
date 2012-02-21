@@ -68,6 +68,30 @@ public class NEAKConfiguratorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        // Check if configurator files exists, if not create it.
+        try {
+			File f = new File("/data/neak/configurator");
+			if (f.exists()) {
+			}else {
+			Runtime.getRuntime().exec("touch /data/neak/configurator");
+			}
+        }
+        catch (Exception e) {  
+            e.printStackTrace();  
+        }
+			
+		try {
+			File f = new File("/sbin/near");
+			if (f.isDirectory()) {
+			}else {
+			Toast.makeText(NEAKConfiguratorActivity.this, "This app requires NEAK Kernel to be installed. Please install and try again. Now closing app...", Toast.LENGTH_SHORT).show();
+			NEAKConfiguratorActivity.this.finish();
+			}
+		}
+		catch (Exception e) {  
+            e.printStackTrace();  
+        }
+
         // Set up UI elements
         initiateUI();
     }

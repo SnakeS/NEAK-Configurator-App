@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="#eb000000" >
     
     <TextView 
         android:id="@+id/textview_aboutTitle"
@@ -14,13 +15,17 @@
         android:id="@+id/scrollview_dialog"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:layout_below="@+id/textview_aboutTitle">
+        android:layout_below="@+id/textview_aboutTitle"
+        android:overScrollMode="always"
+        android:scrollbarStyle="outsideOverlay">
         
         <TextView
             android:id="@+id/textview_aboutDescription"
             android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
-            android:text="@string/about_description"/>
+            android:text="@string/about_description"
+            android:background="#222222"
+            android:textColor="#ededff"/>
         
     </ScrollView>
     

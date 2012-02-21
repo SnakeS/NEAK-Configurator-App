@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
    	android:layout_height="fill_parent"
    	android:orientation="vertical"
+   	android:overScrollMode="always"
+   	android:scrollbarStyle="outsideOverlay"
    	xmlns:android="http://schemas.android.com/apk/res/android">
 		
     <LinearLayout android:layout_width="wrap_content"
@@ -91,14 +93,15 @@
 		    android:layout_height="wrap_content"
 		    android:text="@string/ota_title"
 		    android:textAppearance="?android:attr/textAppearanceLarge" />
-	
+
 		<TextView
 		    android:id="@+id/textView_otaStatus"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:text="@string/ota_status"
 		    android:textAppearance="?android:attr/textAppearanceMedium" />
-
+
+
 		<Button
 		    android:id="@+id/button_downloadOTA"
 		    android:layout_width="fill_parent"
@@ -106,7 +109,7 @@
 		    android:text="@string/download_ota" />
 
 	</LinearLayout>
-
+	
 </ScrollView>
   	
 
