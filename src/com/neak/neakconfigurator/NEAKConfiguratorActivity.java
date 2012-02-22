@@ -40,6 +40,7 @@ public class NEAKConfiguratorActivity extends Activity {
 	private CheckBox chk_lagf;
 	private CheckBox chk_schd;
 	private CheckBox chk_aftr;
+	private CheckBox chk_ext4;
 	
 	// Initiate global boolean values for module state
 	public static boolean boo_cons = false;
@@ -48,6 +49,7 @@ public class NEAKConfiguratorActivity extends Activity {
 	public static boolean boo_lagf = false;
 	public static boolean boo_schd = false;
 	public static boolean boo_aftr = false;
+	public static boolean boo_ext4 = false;
 	
 	// Initiate buttons
 	private Button btn_applyNoBoot;
@@ -79,12 +81,12 @@ public class NEAKConfiguratorActivity extends Activity {
         catch (Exception e) {  
             e.printStackTrace();  
         }
-			
+		// Check if neak kernel is installed, if not, close app and present message to user
 		try {
 			File f = new File("/sbin/near");
 			if (f.isDirectory()) {
 			}else {
-			Toast.makeText(NEAKConfiguratorActivity.this, "This app requires NEAK Kernel to be installed. Please install and try again. Now closing app...", Toast.LENGTH_SHORT).show();
+			Toast.makeText(NEAKConfiguratorActivity.this, "This app requires NEAK Kernel to be installed. Please install and try again. Now closing app...", Toast.LENGTH_LONG).show();
 			NEAKConfiguratorActivity.this.finish();
 			}
 		}
@@ -160,6 +162,7 @@ public class NEAKConfiguratorActivity extends Activity {
         chk_lagf = (CheckBox) findViewById(R.id.checkBox_lagf);
         chk_schd = (CheckBox) findViewById(R.id.checkBox_sched_mc);
         chk_aftr = (CheckBox) findViewById(R.id.checkBox_aftr);
+        chk_ext4 = (CheckBox) findViewById(R.id.checkBox_ext4);
         
         // Set Lionheart tweaks option to disabled by default, will be enabled when Conservative is
         chk_lion.setEnabled(false);
@@ -252,6 +255,19 @@ public class NEAKConfiguratorActivity extends Activity {
             	else {
             		Toast.makeText(NEAKConfiguratorActivity.this, "Aftr Idle Mode will be disabled on reboot", Toast.LENGTH_SHORT).show();
             		boo_aftr = false;
+            	}
+            }
+        });
+        
+        chk_aftr.setOnClickListener(new OnClickListener(){
+            public void onClick(View v) {
+            	if (chk_ext4.isChecked()) {
+            		Toast.makeText(NEAKConfiguratorActivity.this, "Ext4 Boost Optimisations will be enabled on reboot", Toast.LENGTH_SHORT).show();
+            		boo_ext4 = true;
+            	}
+            	else {
+            		Toast.makeText(NEAKConfiguratorActivity.this, "Ext4 Boost Optimisations will be disabled on reboot", Toast.LENGTH_SHORT).show();
+            		boo_ext4 = false;
             	}
             }
         });
@@ -380,6 +396,22 @@ public class NEAKConfiguratorActivity extends Activity {
 		catch (Exception e) {  
             e.printStackTrace();  
         }
+		// Test if Ext4 Boost Optimizations is already enabled, and check it in the App
+		try {
+			File f = new File("/data/neak/ext4boost");
+			if (f.exists()) {
+				chk_ext4.setChecked(true);
+				boo_ext4 = true;
+			}else {
+				chk_ext4.setChecked(false);
+				boo_ext4 = false;
+			}
+			
+		}
+		catch (Exception e) {  
+            e.printStackTrace();  
+        }
+		
 		// Test if OTA app is installed
 		try {
 			File f = new File("/data/data/gingermodupdaterapp.ui/databases/cmupdater.db");

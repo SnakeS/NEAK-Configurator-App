@@ -75,6 +75,12 @@
 	        android:layout_height="wrap_content"
 	        android:text="@string/aftr_idle_enable_text" />
 	    
+	    <CheckBox
+	        android:id="@+id/checkBox_ext4"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="@string/ext4_boost_enable_text" />
+	    
 	    <Button
 	        android:id="@+id/button_applyNoBoot"
 	        android:layout_width="fill_parent"

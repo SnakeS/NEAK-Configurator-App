@@ -24,7 +24,7 @@
             android:layout_width="fill_parent"
         	android:layout_height="wrap_content"
             android:text="@string/about_description"
-            android:background="#222222"
+            android:background="#000000"
             android:textColor="#ededff"/>
         
     </ScrollView>

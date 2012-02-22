@@ -94,6 +94,21 @@ public class Modules extends NEAKConfiguratorActivity {
 	            e.printStackTrace();  
 	        }
 		}
+		
+		if (boo_ext4) {
+			try {
+				File f_ext4 = new File("/data/neak/ext4boost");
+				if (f_ext4.exists()) {
+					// Do Nothing
+				}else {
+					Runtime.getRuntime().exec("touch /data/neak/ext4boost");
+				}
+				
+			}
+			catch (Exception e) {  
+	            e.printStackTrace();  
+	        }
+		}
 	
 	}
 	
@@ -174,6 +189,20 @@ public class Modules extends NEAKConfiguratorActivity {
 				File f_aftr = new File("/data/neak/aftridle");
 				if (f_aftr.exists()) {
 					Runtime.getRuntime().exec("rm /data/neak/aftridle");
+				}else {
+					// Do Nothing
+				}
+				
+			}
+			catch (Exception e) {  
+	            e.printStackTrace();  
+	        }
+		}
+		if (!boo_ext4) {
+			try {
+				File f_ext4 = new File("/data/neak/ext4boost");
+				if (f_ext4.exists()) {
+					Runtime.getRuntime().exec("rm /data/neak/ext4boost");
 				}else {
 					// Do Nothing
 				}

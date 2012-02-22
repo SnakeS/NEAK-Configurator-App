@@ -13,6 +13,7 @@
     <string name="other_title">Other Options</string>
     <string name="sched_mc_enable_text">SCHED_MC</string>
     <string name="aftr_idle_enable_text">AFTR Idle Mode</string>
+    <string name="ext4_boost_enable_text">Ext4 Boost Optimizations</string>
     <string name="apply_no_reboot">Apply Settings (Reboot later)</string>
     <string name="apply_reboot">Apply Settings and Reboot</string>
     <string name="ota_title">NEAK OTA App</string>
