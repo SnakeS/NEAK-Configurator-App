@@ -259,7 +259,7 @@ public class NEAKConfiguratorActivity extends Activity {
             }
         });
         
-        chk_aftr.setOnClickListener(new OnClickListener(){
+        chk_ext4.setOnClickListener(new OnClickListener(){
             public void onClick(View v) {
             	if (chk_ext4.isChecked()) {
             		Toast.makeText(NEAKConfiguratorActivity.this, "Ext4 Boost Optimisations will be enabled on reboot", Toast.LENGTH_SHORT).show();
