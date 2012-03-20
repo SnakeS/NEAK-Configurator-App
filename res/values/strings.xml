@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Hello World, NEAKConfiguratorActivity!</string>
     <string name="app_name">NEAK Configurator</string>
     <string name="governor_title">Governors</string>
     <string name="kernel_options_title">Kernel Options</string>
@@ -13,11 +12,11 @@
     <string name="other_title">Other Options</string>
     <string name="sched_mc_enable_text">SCHED_MC</string>
     <string name="aftr_idle_enable_text">AFTR Idle Mode</string>
-    <string name="ext4_boost_enable_text">Ext4 Boost Optimizations</string>
+    <string name="ext4_boost_enable_text">Ext4 Boost Optimisations</string>
     <string name="apply_no_reboot">Apply Settings (Reboot later)</string>
     <string name="apply_reboot">Apply Settings and Reboot</string>
     <string name="ota_title">NEAK OTA App</string>
-    <string name="ota_status">OTA App status: Not Installed</string>
+    <string name="ota_status">OTA App status: Not Installed yet</string>
     <string name="download_ota">Download OTA App</string>
     <string name="app_url">http://mirror.zantekk.de/neak/ota-app-builds/NEAK-OTA-Updater.apk</string>
     <string name="app_path">/sdcard/NEAK-OTA-Updater.apk</string>
@@ -29,25 +28,13 @@
     <string name="lagfree_enable_text">Lagfree Governor</string>
     <string name="about_title">About</string>
     <string name="about_description">
-        This app is for controlling the NEAK kernel options without having to use the CWM Recovery\n
-        This app is also used for downloading the NEAK kernel OTA updater App\n
+        This App is for controlling the NEAK kernel options without having to use the CWM Recovery.\n
+        This App is also used for downloading the NEAK kernel OTA updater App.\n
         \n
-        The current options that this app can control are:\n
-        Conservative Governor\n
-        Lionheart Tweaks (for Conservative Governor)\n
-        Lazy Governor\n
-        Lagfree Governor\n
-        SCHED_MC\n
-        Aftr Idle Mode\n
+        For a full description of this App visit:\n
+        http://code.google.com/p/neak-kernel-sgs2/wiki/NEAKConfiguratorApplication\n
         \n
-        Settings require a reboot for the relevant modules to be loaded or removed\n
-        This app gives 2 options for applying settings, you can apply setting and reboot later, or apply settings and reboot now\n
-        \n
-        The NEAK OTA section of this app will show the current installation status of the NEAK OTA Updator App 
-        and have a button for downloading the app\n
-        \n
-        For help with this app, please go to:\n
-        http://forum.xda-developers.com/showthread.php?t=1430137
+        This App is covered by GNU GPL v3 license
         </string>
     <string name="about_copyright">Copyright NEAR Team 2012</string>
     <string name="about_coding_title">Coding by:</string>
@@ -55,6 +42,5 @@
     <string name="about_coder2">Simone201</string>
     <string name="about_button_text">Close</string>
     <string name="about_kernel_version_text">Kernel Version: Reading Version</string>
-   
 
 </resources>

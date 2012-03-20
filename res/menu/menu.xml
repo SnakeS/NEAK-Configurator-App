@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-   	    <item android:id="@+id/menu_about"
-	        android:title="About" 
-	        android:icon="@drawable/icon_about"/>
+   	    
+	    <item android:id="@+id/menu_about"
+	        android:title="About"
+	        android:icon="@drawable/icon_about" />
 	    <item android:id="@+id/menu_pro"
-	        android:title="Pro Version coming soon.."/>
+	        android:title="Get the Pro Version"
+	        android:icon="@drawable/ic_goto"/>
 		<item android:id="@+id/menu_exit"
 	        android:title="Exit" 
 	        android:icon="@drawable/icon_exit"/>
